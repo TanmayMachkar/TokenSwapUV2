@@ -8,7 +8,7 @@ const {
 const { erc20ABI, factoryABI, pairABI, routerABI } = require('./AbiInfo');
 
 const provider = new ethers.providers.JsonRpcProvider(
-	'https://bsc-dataseed.binance.org'
+	'https://eth-mainnet.g.alchemy.com/v2/kYpkJ2SIGD-TfnhK9fxgxWz7ASGujf0p'
 );
 
 const factoryInstance = new ethers.Contract(
@@ -39,7 +39,7 @@ const priceFetch = async(humanFormat) => {
 		amountOut[1].toString(),
 		decimal2
 	)
-	console.log("This is the number of WBNB", humanOutput);
+	console.log("This is the number of DAI", humanOutput);
 }
-humanFormat = '100'
+humanFormat = '1'
 priceFetch(humanFormat)
